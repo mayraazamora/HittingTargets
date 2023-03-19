@@ -221,6 +221,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerName: XRI_Left_TriggerButton
+  objects:
+  - {fileID: 6043768929225460290, guid: afcf6c5032f117e46b78b413626f6d61, type: 3}
+  - {fileID: 9034870775114496361, guid: 883734c40b77bd3469d55d04953e72a4, type: 3}
+  - {fileID: 4655035631233232168, guid: 9c05721f6f1f0e3428afc1be18910dc8, type: 3}
+  - {fileID: 5830534655767668470, guid: beb7c16f37d84fb4ab441d91f4d25db6, type: 3}
+  - {fileID: 9109901290590798956, guid: 2f18ffbb3472aec418c94d8e89ee2082, type: 3}
+  - {fileID: 4575815604422035289, guid: 298529eb3b41fd04091b2831aa5e7da4, type: 3}
+  - {fileID: 3104079892542742052, guid: 1a9c68841a705e14aad5b509af4fb9d8, type: 3}
 --- !u!1001 &598666024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -319,6 +327,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerName: XRI_Right_TriggerButton
+  objects:
+  - {fileID: 6043768929225460290, guid: afcf6c5032f117e46b78b413626f6d61, type: 3}
+  - {fileID: 9034870775114496361, guid: 883734c40b77bd3469d55d04953e72a4, type: 3}
+  - {fileID: 4655035631233232168, guid: 9c05721f6f1f0e3428afc1be18910dc8, type: 3}
+  - {fileID: 5830534655767668470, guid: beb7c16f37d84fb4ab441d91f4d25db6, type: 3}
+  - {fileID: 9109901290590798956, guid: 2f18ffbb3472aec418c94d8e89ee2082, type: 3}
+  - {fileID: 4575815604422035289, guid: 298529eb3b41fd04091b2831aa5e7da4, type: 3}
+  - {fileID: 3104079892542742052, guid: 1a9c68841a705e14aad5b509af4fb9d8, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
