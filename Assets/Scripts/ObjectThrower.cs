@@ -19,7 +19,10 @@ public class ObjectThrower : MonoBehaviour
         if (Input.GetButtonDown(triggerName))
         {
             // Randomly choose a game object from an array to spawn
-            GameObject random = objects[Random.Range(0, objects.Length)];
+            GameObject randomObject = objects[Random.Range(0, objects.Length)];
+
+            //Spawn the randomly choosen food prefab
+            GameObject newObject = Instantiate(randomObject, transform.position, transform.rotation, transform);
         }
 
         // Check if the hands trigger button has been released
