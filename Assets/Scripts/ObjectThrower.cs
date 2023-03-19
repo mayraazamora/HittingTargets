@@ -7,7 +7,6 @@ public class ObjectThrower : MonoBehaviour
     public string triggerName;
     public GameObject[] objects;
 
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -27,6 +26,5 @@ public class ObjectThrower : MonoBehaviour
         if (Input.GetButtonUp(triggerName))
         {
         }
-
     }
 }
