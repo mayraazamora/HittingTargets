@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6090dcf2fc175145a10a17797d894ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerName: XRI_Left_TriggerButton
 --- !u!1001 &598666024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -317,6 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6090dcf2fc175145a10a17797d894ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerName: XRI_Right_TriggerButton
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

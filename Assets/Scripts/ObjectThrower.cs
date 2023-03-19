@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ObjectThrower : MonoBehaviour
 {
+    public string triggerName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,10 @@ public class ObjectThrower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Check if the hands trigger button has been pressed
+        if (Input.GetButtonDown(triggerName))
+        {
+
+        }
     }
 }
