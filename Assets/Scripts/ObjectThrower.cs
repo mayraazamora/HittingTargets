@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectThrower : MonoBehaviour
 {
     public string triggerName;
+    public GameObject[] objects;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,8 @@ public class ObjectThrower : MonoBehaviour
         // Check if the hands trigger button has been pressed
         if (Input.GetButtonDown(triggerName))
         {
+            // Randomly choose a game object from an array to spawn
+            GameObject random = objects[Random.Range(0, objects.Length)];
         }
 
         // Check if the hands trigger button has been released
