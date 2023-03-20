@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectThrower : MonoBehaviour
 {
     public string triggerName;
-    public GameObject[] objects;
+    public Rigidbody[] objects;
 
     void Start()
     {
@@ -19,10 +19,13 @@ public class ObjectThrower : MonoBehaviour
         if (Input.GetButtonDown(triggerName))
         {
             // Randomly choose a game object from an array to spawn
-            GameObject randomObject = objects[Random.Range(0, objects.Length)];
+            Rigidbody randomObject = objects[Random.Range(0, objects.Length)];
 
             //Spawn the randomly choosen food prefab
-            GameObject newObject = Instantiate(randomObject, transform.position, transform.rotation, transform);
+            Rigidbody newObject = Instantiate(randomObject, transform.position, transform.rotation, transform);
+
+            newObject.useGravity = false;
+
         }
 
         // Check if the hands trigger button has been released
