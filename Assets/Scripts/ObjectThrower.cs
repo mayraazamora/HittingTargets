@@ -6,6 +6,7 @@ public class ObjectThrower : MonoBehaviour
 {
     public string triggerName;
     public Rigidbody[] objects;
+    public float throwImpulse;
 
     private Rigidbody heldObject;
 
@@ -33,6 +34,7 @@ public class ObjectThrower : MonoBehaviour
             heldObject.isKinematic = false;
 
             // Apply a force to the food object to throw it
+            heldObject.AddForce(transform.forward * throwImpulse);
         }
     }
 }
