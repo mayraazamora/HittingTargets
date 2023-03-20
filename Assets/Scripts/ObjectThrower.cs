@@ -9,11 +9,6 @@ public class ObjectThrower : MonoBehaviour
 
     private Rigidbody heldObject;
 
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -25,9 +20,8 @@ public class ObjectThrower : MonoBehaviour
 
             //Spawn the randomly choosen food prefab
             heldObject = Instantiate(randomObject, transform.position, transform.rotation, transform);
-
             heldObject.useGravity = false;
-
+            heldObject.isKinematic = true;
         }
 
         // Check if the hands trigger button has been released
@@ -35,6 +29,8 @@ public class ObjectThrower : MonoBehaviour
         {
             // Detach the food object from the hand
             heldObject.transform.SetParent(null);
+            heldObject.useGravity = true;
+            heldObject.isKinematic = false;
 
             // Apply a force to the food object to throw it
         }
