@@ -7,6 +7,8 @@ public class ObjectThrower : MonoBehaviour
     public string triggerName;
     public Rigidbody[] objects;
 
+    private Rigidbody heldObject;
+
     void Start()
     {
         
@@ -22,15 +24,19 @@ public class ObjectThrower : MonoBehaviour
             Rigidbody randomObject = objects[Random.Range(0, objects.Length)];
 
             //Spawn the randomly choosen food prefab
-            Rigidbody newObject = Instantiate(randomObject, transform.position, transform.rotation, transform);
+            heldObject = Instantiate(randomObject, transform.position, transform.rotation, transform);
 
-            newObject.useGravity = false;
+            heldObject.useGravity = false;
 
         }
 
         // Check if the hands trigger button has been released
         if (Input.GetButtonUp(triggerName))
         {
+            // Detach the food object from the hand
+            heldObject.transform.SetParent(null);
+
+            // Apply a force to the food object to throw it
         }
     }
 }
