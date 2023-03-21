@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float range;
+    public float speed;
+    private Vector3 initialPosition;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.position = initialPosition + transform.right * Mathf.Sin(Time.time * speed) * range;
     }
 }
