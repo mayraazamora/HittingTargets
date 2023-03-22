@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Target : MonoBehaviour
@@ -7,6 +5,11 @@ public class Target : MonoBehaviour
     public float range;
     public float speed;
     private Vector3 initialPosition;
+
+    private void Start()
+    {
+        initialPosition = transform.position;
+    }
 
     void Update()
     {
