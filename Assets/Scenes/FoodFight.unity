@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8a889718b702347aa4c5f4a9d2587a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
 --- !u!1001 &445926611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -771,6 +772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1878226949, guid: 3b4c3b9543050b84cb38e2ff36f570f6, type: 3}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 415148591}
     - target: {fileID: 1878226949, guid: 3b4c3b9543050b84cb38e2ff36f570f6, type: 3}
       propertyPath: speed
       value: 3

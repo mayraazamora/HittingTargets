@@ -21,7 +21,6 @@ public class Target : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        mayra.hit(); 
         game.OnTargetHit(); // Let the game know the target was hit
         Destroy(gameObject); // Destroys target bullsye 
         Destroy(collision.collider.gameObject);  // Destroys food prefabs when colliding with target

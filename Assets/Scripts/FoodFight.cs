@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class FoodFight : MonoBehaviour
 {
-    private int score;
+    public int score;
+    public Target targetPrefab;
 
     public void OnTargetHit()
     {
         score += 1;
+        SpawnTarget();
+    }
+
+    private void SpawnTarget()
+    {
+        Target newTarget = Instantiate(targetPrefab, Vector3.zero, Quaternion.identity);
     }
 }
