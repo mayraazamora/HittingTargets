@@ -723,6 +723,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1878226949, guid: 3b4c3b9543050b84cb38e2ff36f570f6, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3786808347083150847, guid: 3b4c3b9543050b84cb38e2ff36f570f6, type: 3}
       propertyPath: m_Name
       value: Target
@@ -733,7 +737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3786808347083151875, guid: 3b4c3b9543050b84cb38e2ff36f570f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.503
+      value: -1.89
       objectReference: {fileID: 0}
     - target: {fileID: 3786808347083151875, guid: 3b4c3b9543050b84cb38e2ff36f570f6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -814,7 +818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7756821538548920233, guid: d4be3d13d9c83fc4babd5b4f07326bc7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 2.38
       objectReference: {fileID: 0}
     - target: {fileID: 7756821538548920233, guid: d4be3d13d9c83fc4babd5b4f07326bc7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -881,3 +885,17 @@ AimConstraint:
   m_IsContraintActive: 0
   m_IsLocked: 0
   m_Sources: []
+--- !u!114 &8164078559499934062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559499934053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e3768de982a9f6419ccb7523a9f32e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0.5
+  speed: 2
