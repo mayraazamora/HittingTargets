@@ -12,37 +12,21 @@ public class ObjectThrower : MonoBehaviour
     private Rigidbody heldObject;  // Food that is chosen at random, cloned, and then spawned
 
     void Update()
-    {
-        // Check if the hands trigger button has been pressed
-        if (Input.GetButtonDown(triggerName))
+    {    
+        if (Input.GetButtonDown(triggerName)) // Check if the hands trigger button has been pressed
         {
-            // Choose a food prefab at random to spawn
-            Rigidbody randomObject = objects[Random.Range(0, objects.Length)];
-
-            // Spawn the randomly selected food in hand
-            heldObject = Instantiate(randomObject, transform.position, transform.rotation, transform);
-
-            // Turn off gravity so that food does not fall from your hand as it spawns
-            heldObject.useGravity = false;
-
-            // Avoid having external objects interfere with our food while we are holding it
-            heldObject.isKinematic = true;
+            Rigidbody randomObject = objects[Random.Range(0, objects.Length)]; // Choose a food prefab at random to spawn
+            heldObject = Instantiate(randomObject, transform.position, transform.rotation, transform); // Spawn the randomly selected food in hand         
+            heldObject.useGravity = false; // Turn off gravity so that food does not fall from your hand as it spawns          
+            heldObject.isKinematic = true; // Avoid having external objects interfere with our food while we are holding it
         }
 
-        // Check if the hands trigger button has been released
-        if (Input.GetButtonUp(triggerName))
+        if (Input.GetButtonUp(triggerName)) // Check if the hands trigger button has been released
         {
-            // Unparent food from the hand; otherwise, it will follow the hand even on the ground.
-            heldObject.transform.SetParent(null);
-
-            // Restore gravity; otherwise, food will float in space.
-            heldObject.useGravity = true;
-
-            // We want our food to interact "normally" with external forces of objects.
-            heldObject.isKinematic = false;
-
-            // Apply a force to the food object to throw it
-            heldObject.AddForce(transform.forward * throwImpulse);
+            heldObject.transform.SetParent(null); // Unparent food from the hand; otherwise, it will follow the hand even on the ground.
+            heldObject.useGravity = true; // Restore gravity; otherwise, food will float in space.
+            heldObject.isKinematic = false; // We want our food to interact "normally" with external forces of objects.
+            heldObject.AddForce(transform.forward * throwImpulse); // Apply a force to the food object to throw it
 
         }
     }

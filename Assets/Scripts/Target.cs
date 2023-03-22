@@ -3,12 +3,14 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public float range;
-    public float speed; 
+    public float speed;
+    public FoodFight game;  // Game manager script we are connecting 
+
     private Vector3 initialPosition; // The initial position of the target
 
     private void Start()
     {
-        initialPosition = transform.position;
+        initialPosition = transform.position; // Takes into account the position of the target so target does not start at (0,0,0) 
     }
 
     void Update()
@@ -19,8 +21,12 @@ public class Target : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        mayra.hit(); 
+        game.OnTargetHit(); // Let the game know the target was hit
         Destroy(gameObject); // Destroys target bullsye 
         Destroy(collision.collider.gameObject);  // Destroys food prefabs when colliding with target
-        Debug.Log($"target has been hit {collision.collider.gameObject.name}"); // Logs name of food that touches target 
     }
 }
+
+// Logs name of food that touches target 
+// Debug.Log($"target has been hit {collision.collider.gameObject.name}");
