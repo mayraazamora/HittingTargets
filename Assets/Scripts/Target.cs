@@ -15,4 +15,9 @@ public class Target : MonoBehaviour
     {
         transform.position = initialPosition + transform.right * Mathf.Sin(Time.time * speed) * range;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log($"target has been hit {collision.collider.gameObject.name}");
+    }
 }
