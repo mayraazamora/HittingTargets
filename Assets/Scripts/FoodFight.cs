@@ -1,17 +1,28 @@
 using UnityEngine;
-public class FoodFight : MonoBehaviour // This script is running on that game object we made in the scene
+public class FoodFight : MonoBehaviour 
 {
-    public int score;
-    public Target targetPrefab; // Target prefab we made in unity 
-    public BoxCollider spawnArea; 
+        public Target targetPrefab; 
+        public BoxCollider spawnArea;
+        public float gameDuration;
+        public int score;
+        public float countdown;
     private void Start()
     {
-        SpawnTarget(); // Spawn the 1st target
+        // Spawn the first target
+        SpawnTarget();
+
+        // Reset the game countdown
+        countdown = gameDuration;
     }
     public void OnTargetHit()
     {
-        score += 1;  // Increase the score by 1 
-        SpawnTarget(); // Spawn a new target
+        score += 1; 
+        SpawnTarget(); 
+    }
+    private void Update()
+    {
+        //Decrease the game countdown
+        countdown -= Time.deltaTime;
     }
     private void SpawnTarget()
     {
@@ -20,7 +31,7 @@ public class FoodFight : MonoBehaviour // This script is running on that game ob
             Random.Range(spawnArea.bounds.min.y, spawnArea.bounds.max.y),
             Random.Range(spawnArea.bounds.min.z, spawnArea.bounds.max.z));
            
-        Target newTarget = Instantiate(targetPrefab, randomPosition, Quaternion.Euler(-90,0,0)); // Spawns the new target
-        newTarget.game = this; // Let the target know about the game script // The value we want to assign this game variable in our target is actually the script we are in right now
+        Target newTarget = Instantiate(targetPrefab, randomPosition, Quaternion.Euler(-90,0,0)); 
+        newTarget.game = this; 
     }
 }

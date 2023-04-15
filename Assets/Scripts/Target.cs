@@ -3,19 +3,22 @@ public class Target : MonoBehaviour
 {
     public float range;
     public float speed;
-    public FoodFight game;  // Game manager script we are connecting 
-    private Vector3 initialPosition; // The initial position of the target
+    public FoodFight game;
+    private Vector3 initialPosition;
+
     private void Start()
     {
-        initialPosition = transform.position; // Takes into account the position of the target so target does not start at (0,0,0) 
+        initialPosition = transform.position; 
     }
+
     void Update()
     {
-        transform.position = initialPosition + transform.right * Mathf.Sin(Time.time * speed) * range; // Glides target side to side while taking into acount it's initial position 
+        transform.position = initialPosition + transform.right * Mathf.Sin(Time.time * speed) * range; 
     }
+
     private void OnCollisionEnter(Collision collision)
     {
-        game.OnTargetHit(); // Let the game know the target was hit
-        Destroy(gameObject); // Destroys target bullsye 
+        game.OnTargetHit(); 
+        Destroy(gameObject); 
     }
 }
